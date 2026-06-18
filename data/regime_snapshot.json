@@ -1,136 +1,136 @@
 {
-  "timestamp": "2026-06-18T09:59:40.010292",
-  "market_time": "2026-06-18T09:59:40.003292",
+  "timestamp": "2026-06-18T10:49:49.965854",
+  "market_time": "2026-06-18T10:49:49.958058",
   "regimes": {
     "BTC-USD": {
       "regime": "TRENDING_DOWN",
       "confidence": 0.5,
       "action": "STAY_CASH",
-      "atr_pct": 0.845,
+      "atr_pct": 0.843,
       "reasons": [
         "EMA9 < EMA21 (bearish cross)",
-        "MACD histogram negative (-127.1273)",
-        "RSI neutral (31.05)",
-        "Price near lower BB (-0.11) \u2014 compressed",
-        "Volume elevated (1.99x avg)"
+        "MACD histogram negative (-140.4220)",
+        "RSI neutral (30.47)",
+        "Price near lower BB (-0.03) \u2014 compressed",
+        "Volume normal (1.5x avg)"
       ]
     },
     "ETH-USD": {
       "regime": "RANGING",
       "confidence": 0.5,
       "action": "HOLD",
-      "atr_pct": 1.095,
+      "atr_pct": 1.091,
       "reasons": [
         "EMA9 < EMA21 (bearish cross)",
-        "MACD histogram negative (-4.7307)",
-        "RSI oversold (28.49) \u2014 reversal candidate",
-        "Price near lower BB (-0.16) \u2014 compressed",
-        "Volume elevated (1.86x avg)"
+        "MACD histogram negative (-5.8478)",
+        "RSI oversold (27.24) \u2014 reversal candidate",
+        "Price near lower BB (-0.09) \u2014 compressed",
+        "Volume normal (1.45x avg)"
       ]
     },
     "SOL-USD": {
       "regime": "TRENDING_DOWN",
       "confidence": 0.5,
       "action": "STAY_CASH",
-      "atr_pct": 1.326,
+      "atr_pct": 1.294,
       "reasons": [
         "EMA9 < EMA21 (bearish cross)",
-        "MACD histogram negative (-0.2281)",
-        "RSI neutral (32.37)",
-        "Price near lower BB (-0.09) \u2014 compressed",
-        "Volume elevated (1.62x avg)"
+        "MACD histogram negative (-0.2602)",
+        "RSI neutral (30.83)",
+        "Price near lower BB (-0.04) \u2014 compressed",
+        "Volume normal (1.23x avg)"
       ]
     },
     "XRP-USD": {
       "regime": "TRENDING_DOWN",
       "confidence": 0.5,
       "action": "STAY_CASH",
-      "atr_pct": 1.064,
+      "atr_pct": 1.066,
       "reasons": [
         "EMA9 < EMA21 (bearish cross)",
         "MACD histogram negative (-0.0022)",
-        "RSI neutral (32.77)",
-        "Price near lower BB (0.04) \u2014 compressed",
-        "Volume elevated (1.68x avg)"
+        "RSI neutral (31.02)",
+        "Price near lower BB (0.03) \u2014 compressed",
+        "Volume normal (1.03x avg)"
       ]
     },
     "DOGE-USD": {
-      "regime": "TRENDING_DOWN",
+      "regime": "RANGING",
       "confidence": 0.5,
-      "action": "STAY_CASH",
-      "atr_pct": 1.026,
+      "action": "HOLD",
+      "atr_pct": 1.018,
       "reasons": [
         "EMA9 < EMA21 (bearish cross)",
         "MACD histogram negative (-0.0002)",
-        "RSI neutral (30.98)",
-        "Price near lower BB (-0.01) \u2014 compressed",
-        "Volume normal (1.15x avg)"
+        "RSI oversold (29.81) \u2014 reversal candidate",
+        "Price near lower BB (0.01) \u2014 compressed",
+        "Volume normal (0.89x avg)"
       ]
     },
     "ADA-USD": {
       "regime": "TRENDING_DOWN",
       "confidence": 0.5,
       "action": "STAY_CASH",
-      "atr_pct": 1.346,
+      "atr_pct": 1.353,
       "reasons": [
         "EMA9 < EMA21 (bearish cross)",
         "MACD histogram negative (-0.0003)",
-        "RSI neutral (36.39)",
-        "Price near lower BB (0.02) \u2014 compressed",
-        "Volume normal (1.39x avg)"
+        "RSI neutral (33.55)",
+        "Price near lower BB (-0.03) \u2014 compressed",
+        "Volume normal (0.86x avg)"
       ]
     },
     "AVAX-USD": {
       "regime": "RANGING",
       "confidence": 0.5,
       "action": "HOLD",
-      "atr_pct": 1.479,
+      "atr_pct": 1.488,
       "reasons": [
         "EMA9 < EMA21 (bearish cross)",
-        "MACD histogram negative (-0.0337)",
-        "RSI oversold (27.85) \u2014 reversal candidate",
-        "Price near lower BB (-0.09) \u2014 compressed",
-        "Volume normal (1.22x avg)"
+        "MACD histogram negative (-0.0384)",
+        "RSI oversold (26.07) \u2014 reversal candidate",
+        "Price near lower BB (-0.06) \u2014 compressed",
+        "Volume normal (0.5x avg)"
       ]
     },
     "LINK-USD": {
       "regime": "TRENDING_DOWN",
       "confidence": 0.5,
       "action": "STAY_CASH",
-      "atr_pct": 1.286,
+      "atr_pct": 1.262,
       "reasons": [
         "EMA9 < EMA21 (bearish cross)",
-        "MACD histogram negative (-0.0115)",
-        "RSI neutral (36.07)",
+        "MACD histogram negative (-0.0152)",
+        "RSI neutral (34.32)",
         "Price near lower BB (-0.02) \u2014 compressed",
-        "Volume normal (1.18x avg)"
+        "Volume normal (0.96x avg)"
       ]
     },
     "SUI-USD": {
       "regime": "RANGING",
       "confidence": 0.5,
       "action": "HOLD",
-      "atr_pct": 1.668,
+      "atr_pct": 1.651,
       "reasons": [
         "EMA9 < EMA21 (bearish cross)",
-        "MACD histogram negative (-0.0029)",
-        "RSI oversold (28.72) \u2014 reversal candidate",
-        "Price near lower BB (-0.02) \u2014 compressed",
-        "Volume normal (1.29x avg)",
-        "ATR moderate (1.67% of price)"
+        "MACD histogram negative (-0.0030)",
+        "RSI oversold (28.13) \u2014 reversal candidate",
+        "Price near lower BB (0.02) \u2014 compressed",
+        "Volume normal (1.33x avg)",
+        "ATR moderate (1.65% of price)"
       ]
     },
     "DOT-USD": {
       "regime": "TRENDING_DOWN",
       "confidence": 0.5,
       "action": "STAY_CASH",
-      "atr_pct": 1.407,
+      "atr_pct": 1.388,
       "reasons": [
         "EMA9 < EMA21 (bearish cross)",
-        "MACD histogram negative (-0.0022)",
-        "RSI neutral (34.98)",
-        "Price near lower BB (0.07) \u2014 compressed",
-        "Volume normal (0.91x avg)"
+        "MACD histogram negative (-0.0024)",
+        "RSI neutral (33.61)",
+        "Price near lower BB (0.06) \u2014 compressed",
+        "Volume elevated (1.6x avg)"
       ]
     }
   },
@@ -139,7 +139,6 @@
     "BTC-USD",
     "SOL-USD",
     "XRP-USD",
-    "DOGE-USD",
     "ADA-USD",
     "LINK-USD",
     "DOT-USD"
