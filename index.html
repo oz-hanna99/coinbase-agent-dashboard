@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crypto Agent — Live Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:       #0a0c0f;
+    --surface:  #111418;
+    --border:   #1e2329;
+    --muted:    #3d4451;
+    --text:     #c9d1d9;
+    --dim:      #6e7681;
+    --up:       #00d964;
+    --down:     #ff4d4d;
+    --warn:     #f0a832;
+    --neutral:  #4d9fff;
+    --accent:   #00d964;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 10;
+  }
+
+  .logo {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .logo span {
+    color: var(--dim);
+    font-weight: 400;
+  }
+
+  .status-pill {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: #00d96415;
+    color: var(--up);
+    border: 1px solid #00d96430;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .pulse {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--up);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+  }
+
+  .last-updated {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--dim);
+  }
+
+  /* ── LAYOUT ── */
+  main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 28px 32px;
+    display: grid;
+    gap: 20px;
+  }
+
+  /* ── STAT STRIP ── */
+  .stat-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--dim);
+    margin-bottom: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .stat-value {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1;
+  }
+
+  .stat-value.up   { color: var(--up); }
+  .stat-value.down { color: var(--down); }
+  .stat-value.warn { color: var(--warn); }
+
+  .stat-sub {
+    font-size: 11px;
+    color: var(--dim);
+    margin-top: 6px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  /* ── SECTION HEADERS ── */
+  .section-header {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--dim);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* ── MARKET GRID ── */
+  .market-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+
+  .coin-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    transition: border-color 0.2s;
+  }
+
+  .coin-card:hover { border-color: var(--muted); }
+
+  .coin-card.trending-up    { border-left: 3px solid var(--up); }
+  .coin-card.trending-down  { border-left: 3px solid var(--down); }
+  .coin-card.ranging        { border-left: 3px solid var(--warn); }
+  .coin-card.high-volatility { border-left: 3px solid #ff8c00; }
+
+  .coin-ticker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  .coin-price {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 6px 0;
+  }
+
+  .coin-regime {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: 'IBM Plex Mono', monospace;
+    margin-bottom: 10px;
+  }
+
+  .regime-up   { color: var(--up); }
+  .regime-down { color: var(--down); }
+  .regime-range { color: var(--warn); }
+  .regime-vol  { color: #ff8c00; }
+
+  .coin-indicators {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    font-size: 11px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .ind-label { color: var(--dim); }
+  .ind-val   { color: var(--text); text-align: right; }
+  .ind-val.up   { color: var(--up); }
+  .ind-val.down { color: var(--down); }
+
+  .action-badge {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+  .badge-buy  { background: #00d96420; color: var(--up);   border: 1px solid #00d96440; }
+  .badge-hold { background: #f0a83220; color: var(--warn); border: 1px solid #f0a83240; }
+  .badge-cash { background: #ff4d4d20; color: var(--down); border: 1px solid #ff4d4d40; }
+
+  /* ── POSITIONS TABLE ── */
+  .table-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+  }
+
+  th {
+    background: #0d1117;
+    color: var(--dim);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 10px;
+    padding: 10px 16px;
+    text-align: left;
+    font-weight: 500;
+    border-bottom: 1px solid var(--border);
+  }
+
+  td {
+    padding: 11px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+  }
+
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #ffffff05; }
+
+  .td-up   { color: var(--up); }
+  .td-down { color: var(--down); }
+
+  .status-open   { color: var(--warn); }
+  .status-closed { color: var(--dim); }
+  .status-win    { color: var(--up); }
+  .status-loss   { color: var(--down); }
+
+  .empty-state {
+    padding: 40px;
+    text-align: center;
+    color: var(--dim);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── TWO COLUMN ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  /* ── MINI STAT ROWS ── */
+  .stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+  }
+
+  .stat-row:last-child { border-bottom: none; }
+  .stat-row-label { color: var(--dim); }
+  .stat-row-val   { color: var(--text); font-weight: 500; }
+  .stat-row-val.up   { color: var(--up); }
+  .stat-row-val.down { color: var(--down); }
+  .stat-row-val.warn { color: var(--warn); }
+
+  /* ── PROGRESS BAR ── */
+  .win-bar-wrap {
+    margin: 16px 0 8px;
+  }
+
+  .win-bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--dim);
+    margin-bottom: 6px;
+  }
+
+  .win-bar-track {
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .win-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: var(--up);
+    transition: width 0.6s ease;
+  }
+
+  .win-bar-fill.warn { background: var(--warn); }
+  .win-bar-fill.down { background: var(--down); }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--dim);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+  }
+
+  @media (max-width: 900px) {
+    .market-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-strip  { grid-template-columns: repeat(2, 1fr); }
+    .two-col     { grid-template-columns: 1fr; }
+    main { padding: 16px; }
+    header { padding: 14px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Crypto Agent <span>// Paper Trading</span></div>
+  <div style="display:flex;gap:16px;align-items:center;">
+    <div class="last-updated" id="last-updated">Loading...</div>
+    <div class="status-pill"><div class="pulse"></div>LIVE DATA</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- STAT STRIP -->
+  <div class="stat-strip" id="stat-strip">
+    <div class="stat-card">
+      <div class="stat-label">Total P&amp;L</div>
+      <div class="stat-value" id="stat-pnl">—</div>
+      <div class="stat-sub" id="stat-trades">0 closed trades</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Win Rate</div>
+      <div class="stat-value" id="stat-winrate">—</div>
+      <div class="stat-sub">target &gt;60%</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Open Positions</div>
+      <div class="stat-value" id="stat-open">—</div>
+      <div class="stat-sub" id="stat-open-sub">paper trading</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Max Drawdown</div>
+      <div class="stat-value" id="stat-drawdown">—</div>
+      <div class="stat-sub">paper portfolio</div>
+    </div>
+  </div>
+
+  <!-- MARKET SCAN -->
+  <div>
+    <div class="section-header">
+      <span>Market Scan — Top 10</span>
+      <span id="market-time" style="font-weight:400"></span>
+    </div>
+    <div class="market-grid" id="market-grid">
+      <div class="empty-state" style="grid-column:span 5">Waiting for first agent cycle...</div>
+    </div>
+  </div>
+
+  <!-- POSITIONS + PERFORMANCE -->
+  <div class="two-col">
+
+    <!-- OPEN POSITIONS -->
+    <div>
+      <div class="section-header">Open Positions</div>
+      <div class="table-wrap">
+        <table id="positions-table">
+          <thead>
+            <tr>
+              <th>Ticker</th>
+              <th>Entry</th>
+              <th>Stop</th>
+              <th>Target</th>
+              <th>Unrealized P&amp;L</th>
+            </tr>
+          </thead>
+          <tbody id="positions-body">
+            <tr><td colspan="5" class="empty-state">No open positions</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PERFORMANCE STATS -->
+    <div>
+      <div class="section-header">Performance</div>
+      <div class="panel">
+        <div id="win-bar-section" style="display:none">
+          <div class="win-bar-wrap">
+            <div class="win-bar-label">
+              <span>Win Rate</span>
+              <span id="win-bar-pct">0%</span>
+            </div>
+            <div class="win-bar-track">
+              <div class="win-bar-fill" id="win-bar-fill" style="width:0%"></div>
+            </div>
+          </div>
+        </div>
+        <div id="perf-stats">
+          <div class="stat-row">
+            <span class="stat-row-label">Closed trades</span>
+            <span class="stat-row-val" id="p-trades">0</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-row-label">Avg win</span>
+            <span class="stat-row-val up" id="p-avgwin">—</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-row-label">Avg loss</span>
+            <span class="stat-row-val down" id="p-avgloss">—</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-row-label">Profit factor</span>
+            <span class="stat-row-val" id="p-pf">—</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-row-label">Sharpe (approx)</span>
+            <span class="stat-row-val" id="p-sharpe">—</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-row-label">Max drawdown</span>
+            <span class="stat-row-val down" id="p-dd">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TRADE HISTORY -->
+  <div>
+    <div class="section-header">Trade History</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Ticker</th>
+            <th>Action</th>
+            <th>Entry</th>
+            <th>Exit</th>
+            <th>Size (USD)</th>
+            <th>P&amp;L</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody id="history-body">
+          <tr><td colspan="8" class="empty-state">No closed trades yet — positions will appear here once they hit stop-loss or take-profit</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  Coinbase Agent · Paper Trading Mode · Data refreshes on each agent cycle (hourly)
+</footer>
+
+<script>
+  const fmt = (n, dec=2) => n == null ? '—' : Number(n).toFixed(dec);
+  const fmtUSD = (n) => n == null ? '—' : '$' + Number(n).toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:4});
+  const fmtPct = (n) => n == null ? '—' : Number(n).toFixed(1) + '%';
+
+  const REGIME_CLASS = {
+    'TRENDING_UP':    'trending-up',
+    'TRENDING_DOWN':  'trending-down',
+    'RANGING':        'ranging',
+    'HIGH_VOLATILITY':'high-volatility',
+  };
+
+  const REGIME_COLOR = {
+    'TRENDING_UP':    'regime-up',
+    'TRENDING_DOWN':  'regime-down',
+    'RANGING':        'regime-range',
+    'HIGH_VOLATILITY':'regime-vol',
+  };
+
+  const ACTION_BADGE = {
+    'BUY_ELIGIBLE':      '<span class="action-badge badge-buy">BUY ELIGIBLE</span>',
+    'BUY_NEAR_LOWER_BB': '<span class="action-badge badge-buy">BUY SIGNAL</span>',
+    'HOLD':              '<span class="action-badge badge-hold">HOLD</span>',
+    'STAY_CASH':         '<span class="action-badge badge-cash">STAY CASH</span>',
+    'REDUCE_EXPOSURE':   '<span class="action-badge badge-cash">REDUCE</span>',
+  };
+
+  async function loadJSON(path) {
+    try {
+      const r = await fetch(path + '?t=' + Date.now());
+      return await r.json();
+    } catch(e) {
+      return null;
+    }
+  }
+
+  async function refresh() {
+    const [market, regime, trades, stats] = await Promise.all([
+      loadJSON('data/market_snapshot.json'),
+      loadJSON('data/regime_snapshot.json'),
+      loadJSON('data/paper_trades.json'),
+      loadJSON('data/performance_stats.json'),
+    ]);
+
+    // Last updated
+    if (market?.timestamp) {
+      const d = new Date(market.timestamp);
+      document.getElementById('last-updated').textContent =
+        'Last cycle: ' + d.toLocaleTimeString();
+    }
+
+    // Market grid
+    const marketData  = market?.data || {};
+    const regimeData  = regime?.regimes || {};
+    const grid = document.getElementById('market-grid');
+
+    const tickers = Object.keys(marketData);
+    if (tickers.length === 0) {
+      grid.innerHTML = '<div class="empty-state" style="grid-column:span 5">Waiting for first agent cycle...</div>';
+    } else {
+      grid.innerHTML = tickers.map(ticker => {
+        const m = marketData[ticker] || {};
+        const r = regimeData[ticker]  || {};
+        if (m.error) return `<div class="coin-card"><div class="coin-ticker">${ticker}</div><div style="color:var(--down);font-size:11px;margin-top:8px">No data</div></div>`;
+
+        const rClass  = REGIME_CLASS[r.regime] || '';
+        const rColor  = REGIME_COLOR[r.regime] || '';
+        const badge   = ACTION_BADGE[r.action] || '';
+        const macdUp  = (m.macd_hist || 0) > 0;
+        const emaUp   = m.ema_cross === 'BULLISH';
+
+        return `
+          <div class="coin-card ${rClass}">
+            <div class="coin-ticker">${ticker.replace('-USD','')}</div>
+            <div class="coin-price">${fmtUSD(m.price)}</div>
+            <div class="coin-regime ${rColor}">${r.regime || 'UNKNOWN'}</div>
+            <div class="coin-indicators">
+              <span class="ind-label">RSI</span>
+              <span class="ind-val ${m.rsi > 70 ? 'down' : m.rsi < 30 ? 'up' : ''}">${fmt(m.rsi)}</span>
+              <span class="ind-label">MACD</span>
+              <span class="ind-val ${macdUp ? 'up' : 'down'}">${macdUp ? '▲' : '▼'} ${fmt(m.macd_hist,4)}</span>
+              <span class="ind-label">EMA</span>
+              <span class="ind-val ${emaUp ? 'up' : 'down'}">${emaUp ? 'BULL' : 'BEAR'}</span>
+              <span class="ind-label">BB%</span>
+              <span class="ind-val">${fmt(m.bb_pct,3)}</span>
+              <span class="ind-label">ATR</span>
+              <span class="ind-val">${fmt(m.atr_pct || (m.atr/m.price*100),2)}%</span>
+              <span class="ind-label">Vol</span>
+              <span class="ind-val ${(m.volume_ratio||0) > 2 ? 'warn' : ''}">${fmt(m.volume_ratio,1)}x</span>
+            </div>
+            ${badge}
+          </div>`;
+      }).join('');
+    }
+
+    // Market time
+    if (regime?.timestamp) {
+      document.getElementById('market-time').textContent =
+        new Date(regime.timestamp).toLocaleString();
+    }
+
+    // Performance stats
+    if (stats) {
+      const pnl = stats.total_pnl_usd;
+      const wr  = stats.win_rate_pct;
+
+      document.getElementById('stat-pnl').textContent = pnl != null ? (pnl >= 0 ? '+$' : '-$') + Math.abs(pnl).toFixed(2) : '—';
+      document.getElementById('stat-pnl').className   = 'stat-value ' + (pnl > 0 ? 'up' : pnl < 0 ? 'down' : '');
+      document.getElementById('stat-winrate').textContent = wr != null ? wr + '%' : '—';
+      document.getElementById('stat-winrate').className   = 'stat-value ' + (wr >= 60 ? 'up' : wr >= 40 ? 'warn' : wr != null ? 'down' : '');
+      document.getElementById('stat-trades').textContent  = (stats.total_trades || 0) + ' closed trades';
+      document.getElementById('stat-open').textContent    = stats.open_positions ?? '—';
+      document.getElementById('stat-drawdown').textContent = stats.max_drawdown_usd != null ? '$' + stats.max_drawdown_usd.toFixed(2) : '—';
+
+      document.getElementById('p-trades').textContent = stats.total_trades ?? 0;
+      document.getElementById('p-avgwin').textContent  = stats.avg_win_usd  != null ? '+$' + stats.avg_win_usd.toFixed(2)  : '—';
+      document.getElementById('p-avgloss').textContent = stats.avg_loss_usd != null ? '-$' + Math.abs(stats.avg_loss_usd).toFixed(2) : '—';
+      document.getElementById('p-pf').textContent      = stats.profit_factor != null ? stats.profit_factor : '—';
+      document.getElementById('p-sharpe').textContent  = stats.sharpe_approx != null ? stats.sharpe_approx : '—';
+      document.getElementById('p-dd').textContent      = stats.max_drawdown_usd != null ? '$' + stats.max_drawdown_usd.toFixed(2) : '—';
+
+      if (wr != null) {
+        document.getElementById('win-bar-section').style.display = 'block';
+        document.getElementById('win-bar-pct').textContent = wr + '%';
+        const fill = document.getElementById('win-bar-fill');
+        fill.style.width = Math.min(wr, 100) + '%';
+        fill.className = 'win-bar-fill' + (wr >= 60 ? '' : wr >= 40 ? ' warn' : ' down');
+      }
+    }
+
+    // Open positions
+    const openTrades = (trades || []).filter(t => t.status === 'OPEN');
+    const posBody = document.getElementById('positions-body');
+    document.getElementById('stat-open').textContent = openTrades.length;
+
+    if (openTrades.length === 0) {
+      posBody.innerHTML = '<tr><td colspan="5" class="empty-state">No open positions</td></tr>';
+    } else {
+      posBody.innerHTML = openTrades.map(t => {
+        const unreal = t.coins && t.entry_price
+          ? ((t.exit_price || t.entry_price) - t.entry_price) * t.coins
+          : null;
+        return `<tr>
+          <td>${t.ticker}</td>
+          <td>${fmtUSD(t.entry_price)}</td>
+          <td>${fmtUSD(t.stop_loss)}</td>
+          <td>${fmtUSD(t.take_profit)}</td>
+          <td class="${unreal > 0 ? 'td-up' : unreal < 0 ? 'td-down' : ''}">${unreal != null ? (unreal >= 0 ? '+' : '') + '$' + Math.abs(unreal).toFixed(2) : '—'}</td>
+        </tr>`;
+      }).join('');
+    }
+
+    // Trade history (closed only)
+    const closed = (trades || []).filter(t => t.status === 'CLOSED').reverse();
+    const histBody = document.getElementById('history-body');
+    if (closed.length === 0) {
+      histBody.innerHTML = '<tr><td colspan="8" class="empty-state">No closed trades yet — positions appear here once they hit stop-loss or take-profit</td></tr>';
+    } else {
+      histBody.innerHTML = closed.map(t => {
+        const pnl = t.pnl_usd;
+        const won = t.win;
+        const time = t.close_time ? new Date(t.close_time).toLocaleString() : '—';
+        return `<tr>
+          <td>${time}</td>
+          <td>${t.ticker}</td>
+          <td>${t.action}</td>
+          <td>${fmtUSD(t.entry_price)}</td>
+          <td>${fmtUSD(t.exit_price)}</td>
+          <td>${fmtUSD(t.trade_usd)}</td>
+          <td class="${pnl > 0 ? 'td-up' : 'td-down'}">${pnl != null ? (pnl >= 0 ? '+' : '') + '$' + Math.abs(pnl).toFixed(2) : '—'}</td>
+          <td class="${won ? 'status-win' : 'status-loss'}">${t.close_reason || (won ? 'WIN' : 'LOSS')}</td>
+        </tr>`;
+      }).join('');
+    }
+  }
+
+  refresh();
+</script>
+</body>
+</html>
