@@ -13,7 +13,7 @@ cp "$AGENT_DIR/performance_stats.json" "$DASH_DIR/data/performance_stats.json"
 
 # Push to GitHub
 cd "$DASH_DIR"
-git add data/
+git add data/ index.html push_dashboard.sh
 git commit -m "agent cycle: $(date '+%Y-%m-%d %H:%M')" --quiet
 git push origin main --quiet
 
