@@ -655,8 +655,8 @@
       posBody.innerHTML = '<tr><td colspan="5" class="empty-state">No open positions</td></tr>';
     } else {
       posBody.innerHTML = openTrades.map(t => {
-        const unreal = t.coins && t.entry_price
-          ? ((t.exit_price || t.entry_price) - t.entry_price) * t.coins
+        const unreal = t.coins && t.entry_price && t.current_price
+          ? (t.current_price - t.entry_price) * t.coins
           : null;
         return `<tr>
           <td>${t.ticker}</td>
