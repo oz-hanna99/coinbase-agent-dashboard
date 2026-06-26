@@ -658,7 +658,9 @@
         const unreal = t.coins && t.entry_price && t.current_price
           ? (t.current_price - t.entry_price) * t.coins
           : null;
+        const opened = t.timestamp ? new Date(t.timestamp).toLocaleString() : '—';
         return `<tr>
+          <td>${opened}</td>
           <td>${t.ticker}</td>
           <td>${fmtUSD(t.entry_price)}</td>
           <td>${fmtUSD(t.stop_loss)}</td>
