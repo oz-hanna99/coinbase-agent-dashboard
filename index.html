@@ -426,6 +426,7 @@
         <table id="positions-table">
           <thead>
             <tr>
+              <th>Opened</th>
               <th>Ticker</th>
               <th>Entry</th>
               <th>Stop</th>
@@ -655,6 +656,7 @@
       posBody.innerHTML = '<tr><td colspan="5" class="empty-state">No open positions</td></tr>';
     } else {
       posBody.innerHTML = openTrades.map(t => {
+        const opened = t.timestamp ? new Date(t.timestamp).toLocaleString("en-US", {month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"}) : "—";
         const unreal = t.coins && t.entry_price && t.current_price
           ? (t.current_price - t.entry_price) * t.coins
           : null;
