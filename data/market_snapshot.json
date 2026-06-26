@@ -1,35 +1,165 @@
 {
-  "timestamp": "2026-06-26T14:00:03.139971",
+  "timestamp": "2026-06-26T14:06:03.332498",
   "data": {
     "BTC-USD": {
-      "error": "No data"
+      "price": 59606.22,
+      "rsi": 47.51,
+      "macd_line": -100.130473,
+      "macd_signal": -124.793622,
+      "macd_hist": 24.663149,
+      "bb_upper": 60603.9332,
+      "bb_lower": 58827.8028,
+      "bb_middle": 59715.868,
+      "bb_pct": 0.4383,
+      "ema9": 59695.2915,
+      "ema21": 59755.5132,
+      "ema_cross": "BEARISH",
+      "atr": 643.431588,
+      "volume_ratio": 0.02
     },
     "ETH-USD": {
-      "error": "No data"
+      "price": 1566.4,
+      "rsi": 48.83,
+      "macd_line": -2.293389,
+      "macd_signal": -5.588756,
+      "macd_hist": 3.295367,
+      "bb_upper": 1590.5714,
+      "bb_lower": 1529.3196,
+      "bb_middle": 1559.9455,
+      "bb_pct": 0.6054,
+      "ema9": 1567.6446,
+      "ema21": 1567.0216,
+      "ema_cross": "BULLISH",
+      "atr": 20.224172,
+      "volume_ratio": 0.02
     },
     "SOL-USD": {
-      "error": "No data"
+      "price": 71.76,
+      "rsi": 61.2,
+      "macd_line": 1.219113,
+      "macd_signal": 1.01839,
+      "macd_hist": 0.200723,
+      "bb_upper": 73.8947,
+      "bb_lower": 66.3663,
+      "bb_middle": 70.1305,
+      "bb_pct": 0.7164,
+      "ema9": 71.632,
+      "ema21": 70.4043,
+      "ema_cross": "BULLISH",
+      "atr": 1.223492,
+      "volume_ratio": 0.08
     },
     "XRP-USD": {
-      "error": "No data"
+      "price": 1.0396,
+      "rsi": 49.55,
+      "macd_line": -0.000661,
+      "macd_signal": -0.0028,
+      "macd_hist": 0.002139,
+      "bb_upper": 1.0546,
+      "bb_lower": 1.0158,
+      "bb_middle": 1.0352,
+      "bb_pct": 0.6131,
+      "ema9": 1.0403,
+      "ema21": 1.0392,
+      "ema_cross": "BULLISH",
+      "atr": 0.01274,
+      "volume_ratio": 0.03
     },
     "DOGE-USD": {
-      "error": "No data"
+      "price": 0.07518,
+      "rsi": 53.47,
+      "macd_line": 0.000163,
+      "macd_signal": -2.5e-05,
+      "macd_hist": 0.000188,
+      "bb_upper": 0.076,
+      "bb_lower": 0.0729,
+      "bb_middle": 0.0744,
+      "bb_pct": 0.7315,
+      "ema9": 0.075,
+      "ema21": 0.0747,
+      "ema_cross": "BULLISH",
+      "atr": 0.000965,
+      "volume_ratio": 0.05
     },
     "ADA-USD": {
-      "error": "No data"
+      "price": 0.1468,
+      "rsi": 55.03,
+      "macd_line": 0.00086,
+      "macd_signal": 0.000512,
+      "macd_hist": 0.000348,
+      "bb_upper": 0.1496,
+      "bb_lower": 0.1401,
+      "bb_middle": 0.1448,
+      "bb_pct": 0.7054,
+      "ema9": 0.1465,
+      "ema21": 0.1455,
+      "ema_cross": "BULLISH",
+      "atr": 0.002228,
+      "volume_ratio": 0.04
     },
     "AVAX-USD": {
-      "error": "No data"
+      "price": 6.33,
+      "rsi": 53.94,
+      "macd_line": 0.039722,
+      "macd_signal": 0.019075,
+      "macd_hist": 0.020647,
+      "bb_upper": 6.4875,
+      "bb_lower": 5.9795,
+      "bb_middle": 6.2335,
+      "bb_pct": 0.69,
+      "ema9": 6.3279,
+      "ema21": 6.2774,
+      "ema_cross": "BULLISH",
+      "atr": 0.10345,
+      "volume_ratio": 0.08
     },
     "LINK-USD": {
-      "error": "No data"
+      "price": 7.284,
+      "rsi": 51.45,
+      "macd_line": 0.011279,
+      "macd_signal": -0.003706,
+      "macd_hist": 0.014986,
+      "bb_upper": 7.3998,
+      "bb_lower": 7.0706,
+      "bb_middle": 7.2352,
+      "bb_pct": 0.6482,
+      "ema9": 7.2857,
+      "ema21": 7.264,
+      "ema_cross": "BULLISH",
+      "atr": 0.093057,
+      "volume_ratio": 0.01
     },
     "SUI-USD": {
-      "error": "No data"
+      "price": 0.6953,
+      "rsi": 56.88,
+      "macd_line": 0.004109,
+      "macd_signal": 0.002535,
+      "macd_hist": 0.001573,
+      "bb_upper": 0.705,
+      "bb_lower": 0.6658,
+      "bb_middle": 0.6854,
+      "bb_pct": 0.753,
+      "ema9": 0.6923,
+      "ema21": 0.6876,
+      "ema_cross": "BULLISH",
+      "atr": 0.010377,
+      "volume_ratio": 0.04
     },
     "DOT-USD": {
-      "error": "No data"
+      "price": 0.852,
+      "rsi": 52.8,
+      "macd_line": 0.001157,
+      "macd_signal": -0.001949,
+      "macd_hist": 0.003107,
+      "bb_upper": 0.8666,
+      "bb_lower": 0.8136,
+      "bb_middle": 0.8401,
+      "bb_pct": 0.7243,
+      "ema9": 0.8503,
+      "ema21": 0.8469,
+      "ema_cross": "BULLISH",
+      "atr": 0.011832,
+      "volume_ratio": 0.48
     }
   }
 }
