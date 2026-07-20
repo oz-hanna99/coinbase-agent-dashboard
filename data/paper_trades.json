@@ -37,7 +37,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "SOL is in a confirmed TRENDING_UP regime with 83% confidence, supported by bullish EMA cross (EMA9 > EMA21), positive MACD histogram, and healthy RSI at 63.42 with room before overbought territory. Price is at 77.7% of the Bollinger Band, indicating upward momentum without being at extreme extension, and volume is in line with average confirming steady participation. Stop is placed below recent structure support near the midpoint of the BB range, targeting the next resistance zone with a solid 2:1 risk-reward appropriate for an aggressive long-only profile.",
-    "current_price": 77.26
+    "current_price": 77.94
   },
   {
     "id": "fa4d4588-9b56-4aa9-8f62-5d45392d1d15",
@@ -121,7 +121,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "AVAX is in a confirmed TRENDING_UP regime with 83% confidence, supported by bullish EMA cross (EMA9 > EMA21), positive MACD histogram, and a healthy RSI of 55.26 leaving room to run before overbought territory. Price is positioned at roughly 75% of the Bollinger Band range, indicating momentum without being stretched, and volume at 1.14x average confirms buyer participation. Stop is set just below the BB lower band at $5.97 to allow natural volatility (ATR-based), with a take-profit targeting the next resistance zone for a 2.63:1 risk-reward ratio.",
-    "current_price": 6.47
+    "current_price": 6.59
   },
   {
     "id": "0ce9ac94-9c33-48f0-83a2-9f3c1de6b528",
@@ -135,11 +135,15 @@
     "take_profit": 7.72,
     "trade_usd": 200.0,
     "coins": 27.359781,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
+    "status": "CLOSED",
+    "exit_price": 8.599,
+    "pnl_usd": 35.2668,
     "reasoning": "LINK-USD is in a confirmed TRENDING_UP regime with 83% confidence, supported by a bullish EMA cross (EMA9 > EMA21), positive MACD histogram, and a healthy RSI of 53.42 leaving room to run. Price is positioned at 74% of the Bollinger Band range suggesting momentum without being overbought. Stop is set just below the BB lower band (~2.5x ATR), with a target near the upper BB extension for a reasonable risk/reward given the aggressive profile.",
-    "current_price": 7.63
+    "current_price": 8.599,
+    "close_reason": "TAKE_PROFIT",
+    "close_time": "2026-07-20T11:25:02.340689",
+    "pnl_pct": 17.6334,
+    "win": true
   },
   {
     "id": "63b1a931-40a0-4a3f-afe3-1a200e35d2ec",
@@ -153,11 +157,15 @@
     "take_profit": 0.735,
     "trade_usd": 200.0,
     "coins": 286.779467,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
+    "status": "CLOSED",
+    "exit_price": 0.7696,
+    "pnl_usd": 20.7055,
     "reasoning": "SUI is in a confirmed TRENDING_UP regime with bullish EMA cross (EMA9 > EMA21), positive MACD histogram, and healthy RSI at 58.59 \u2014 not overbought, leaving room to run. Price is near the upper Bollinger Band (BB% 0.83) suggesting momentum, though volume is slightly below average at 0.82x which tempers conviction to MEDIUM. Stop placed at the lower Bollinger Band for a wide, volatility-aware buffer consistent with the aggressive profile; target set at a 2x ATR extension above current price.",
-    "current_price": 0.7101
+    "current_price": 0.7696,
+    "close_reason": "TAKE_PROFIT",
+    "close_time": "2026-07-20T11:25:02.720868",
+    "pnl_pct": 10.3527,
+    "win": true
   },
   {
     "id": "bb413c6d-bbc8-47eb-b3d8-701667630aa6",

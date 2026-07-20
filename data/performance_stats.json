@@ -1,14 +1,14 @@
 {
-  "total_trades": 5,
-  "open_positions": 4,
-  "wins": 3,
+  "total_trades": 7,
+  "open_positions": 2,
+  "wins": 5,
   "losses": 2,
-  "win_rate_pct": 60.0,
-  "total_pnl_usd": 39.52,
-  "avg_win_usd": 19.04,
+  "win_rate_pct": 71.4,
+  "total_pnl_usd": 95.49,
+  "avg_win_usd": 22.62,
   "avg_loss_usd": -8.81,
-  "profit_factor": 2.16,
+  "profit_factor": 2.57,
   "max_drawdown_usd": 9.18,
-  "sharpe_approx": 0.534,
-  "last_updated": "2026-07-08T15:00:09.945702"
+  "sharpe_approx": 0.856,
+  "last_updated": "2026-07-20T12:00:04.621955"
 }
