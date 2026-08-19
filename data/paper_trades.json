@@ -125,7 +125,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "AVAX is in a confirmed TRENDING_UP regime with 83% confidence, supported by bullish EMA cross (EMA9 > EMA21), positive MACD histogram, and a healthy RSI of 55.26 leaving room to run before overbought territory. Price is positioned at roughly 75% of the Bollinger Band range, indicating momentum without being stretched, and volume at 1.14x average confirms buyer participation. Stop is set just below the BB lower band at $5.97 to allow natural volatility (ATR-based), with a take-profit targeting the next resistance zone for a 2.63:1 risk-reward ratio.",
-    "current_price": 6.536
+    "current_price": 6.529
   },
   {
     "id": "0ce9ac94-9c33-48f0-83a2-9f3c1de6b528",
@@ -297,7 +297,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "DOGE is in a confirmed TRENDING_UP regime with 83% confidence, supported by a bullish EMA cross (EMA9 > EMA21), positive MACD histogram, and a healthy RSI at 58 leaving room to run before overbought territory. Price is near the upper half of the Bollinger Band at 0.79%, suggesting momentum, though the low volume ratio of 0.27x is a concern warranting MEDIUM rather than HIGH conviction. Stop loss is set just below the BB lower band at $0.0693 (~1.8% risk) with a target near $0.0732 (~3.7% reward), yielding approximately 2:1 risk/reward consistent with an aggressive but disciplined long entry.",
-    "current_price": 0.0723
+    "current_price": 0.07237
   },
   {
     "id": "a8db4489-9fbf-49a3-94fc-26a6cd25ec2d",
@@ -315,7 +315,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "Trend signals are aligned bullishly with EMA9 > EMA21, positive MACD histogram, and an uptrend regime classification. However, price is pressing against the upper Bollinger Band (BB% at 0.98) and RSI at 68.75 is approaching overbought territory, suggesting limited near-term upside headroom. The critical concern is the extremely low volume ratio at 0.04x the 20-period average, meaning this move lacks conviction and is susceptible to reversal \u2014 hence a small position size is warranted with a stop at the lower Bollinger Band and a modest profit target.",
-    "current_price": 0.17963
+    "current_price": 0.17959
   },
   {
     "id": "cb54f084-7d3e-42d4-9281-8bc4d3816e92",
@@ -333,6 +333,6 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "DOT is in a confirmed TRENDING_UP regime with 83% confidence, supported by bullish EMA cross (EMA9 > EMA21), positive MACD histogram, and healthy RSI at 64.46 \u2014 not yet overbought. Price is near the upper half of the Bollinger Band but has room to run toward $0.82+ before hitting extended territory. The primary concern is the extremely low volume ratio (0.07x average), which reduces conviction and warrants a moderate rather than maximum position size until volume confirms the move.",
-    "current_price": 0.7766
+    "current_price": 0.7755
   }
 ]
