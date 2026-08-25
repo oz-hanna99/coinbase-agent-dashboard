@@ -1,142 +1,152 @@
 {
-  "timestamp": "2026-08-19T18:14:52.011702",
-  "market_time": "2026-08-19T18:14:51.999921",
+  "timestamp": "2026-08-25T15:00:28.633604",
+  "market_time": "2026-08-25T15:00:28.632179",
   "regimes": {
     "BTC-USD": {
       "regime": "RANGING",
       "confidence": 0.5,
       "action": "HOLD",
-      "atr_pct": 0.765,
+      "atr_pct": 0.937,
       "reasons": [
         "EMA9 > EMA21 (bullish cross)",
-        "MACD histogram positive (440.2397)",
-        "RSI overbought (84.56)",
-        "Price near upper BB (0.96) \u2014 extended",
-        "Volume normal (0.23x avg)"
+        "MACD histogram negative (-202.7350)",
+        "RSI healthy (50.98)",
+        "Price mid-BB (0.39)",
+        "Volume elevated (1.96x avg)"
       ]
     },
     "ETH-USD": {
-      "regime": "RANGING",
+      "regime": "TRENDING_DOWN",
       "confidence": 0.5,
-      "action": "HOLD",
-      "atr_pct": 1.019,
+      "action": "STAY_CASH",
+      "atr_pct": 1.066,
       "reasons": [
-        "EMA9 > EMA21 (bullish cross)",
-        "MACD histogram positive (19.6536)",
-        "RSI overbought (88.56)",
-        "Price near upper BB (0.98) \u2014 extended",
-        "Volume normal (0.3x avg)"
+        "EMA9 < EMA21 (bearish cross)",
+        "MACD histogram negative (-4.1550)",
+        "RSI healthy (49.67)",
+        "Price mid-BB (0.35)",
+        "Volume spike (2.8x avg) \u2014 elevated risk"
       ]
     },
     "SOL-USD": {
       "regime": "RANGING",
       "confidence": 0.5,
       "action": "HOLD",
-      "atr_pct": 0.865,
+      "atr_pct": 1.63,
       "reasons": [
         "EMA9 > EMA21 (bullish cross)",
-        "MACD histogram positive (0.4528)",
-        "RSI overbought (83.97)",
-        "Price near upper BB (0.93) \u2014 extended",
-        "Volume normal (0.29x avg)"
+        "MACD histogram negative (-0.4884)",
+        "RSI healthy (49.14)",
+        "Price mid-BB (0.33)",
+        "Volume normal (0.99x avg)",
+        "ATR moderate (1.63% of price)"
       ]
     },
     "XRP-USD": {
-      "regime": "RANGING",
-      "confidence": 0.5,
-      "action": "HOLD",
-      "atr_pct": 0.815,
+      "regime": "TRENDING_DOWN",
+      "confidence": 0.67,
+      "action": "STAY_CASH",
+      "atr_pct": 1.542,
       "reasons": [
-        "EMA9 > EMA21 (bullish cross)",
-        "MACD histogram positive (0.0066)",
-        "RSI overbought (80.54)",
-        "Price near upper BB (0.93) \u2014 extended",
-        "Volume normal (0.28x avg)"
+        "EMA9 < EMA21 (bearish cross)",
+        "MACD histogram negative (-0.0037)",
+        "RSI neutral (44.2)",
+        "Price mid-BB (0.25)",
+        "Volume normal (0.0x avg)",
+        "ATR moderate (1.54% of price)"
       ]
     },
     "DOGE-USD": {
-      "regime": "RANGING",
+      "regime": "TRENDING_DOWN",
       "confidence": 0.5,
-      "action": "HOLD",
-      "atr_pct": 0.72,
+      "action": "STAY_CASH",
+      "atr_pct": 1.516,
       "reasons": [
-        "EMA9 > EMA21 (bullish cross)",
-        "MACD histogram positive (0.0003)",
-        "RSI overbought (73.96)",
-        "Price near upper BB (0.95) \u2014 extended",
-        "Volume normal (0.64x avg)"
+        "EMA9 < EMA21 (bearish cross)",
+        "MACD histogram negative (-0.0003)",
+        "RSI neutral (40.52)",
+        "Price near lower BB (0.16) \u2014 compressed",
+        "Volume normal (0.0x avg)",
+        "ATR moderate (1.52% of price)"
       ]
     },
     "ADA-USD": {
-      "regime": "TRENDING_UP",
+      "regime": "TRENDING_DOWN",
       "confidence": 0.5,
-      "action": "BUY_ELIGIBLE",
-      "atr_pct": 1.043,
+      "action": "STAY_CASH",
+      "atr_pct": 1.694,
       "reasons": [
-        "EMA9 > EMA21 (bullish cross)",
-        "MACD histogram positive (0.0006)",
-        "RSI neutral (68.51)",
-        "Price near upper BB (0.98) \u2014 extended",
-        "Volume normal (0.52x avg)"
+        "EMA9 < EMA21 (bearish cross)",
+        "MACD histogram negative (-0.0009)",
+        "RSI neutral (38.85)",
+        "Price near lower BB (0.13) \u2014 compressed",
+        "Volume normal (0.0x avg)",
+        "ATR moderate (1.69% of price)"
       ]
     },
     "AVAX-USD": {
-      "regime": "TRENDING_UP",
-      "confidence": 0.67,
-      "action": "BUY_ELIGIBLE",
-      "atr_pct": 1.008,
+      "regime": "TRENDING_DOWN",
+      "confidence": 0.5,
+      "action": "STAY_CASH",
+      "atr_pct": 1.091,
       "reasons": [
-        "EMA9 > EMA21 (bullish cross)",
-        "MACD histogram positive (0.0245)",
-        "RSI healthy (64.62)",
-        "Price near upper BB (0.91) \u2014 extended",
-        "Volume normal (0.32x avg)"
+        "EMA9 < EMA21 (bearish cross)",
+        "MACD histogram negative (-0.0150)",
+        "RSI healthy (45.51)",
+        "Price mid-BB (0.25)",
+        "Volume normal (0.0x avg)"
       ]
     },
     "LINK-USD": {
-      "regime": "RANGING",
+      "regime": "TRENDING_DOWN",
       "confidence": 0.5,
-      "action": "HOLD",
-      "atr_pct": 1.113,
+      "action": "STAY_CASH",
+      "atr_pct": 1.235,
       "reasons": [
-        "EMA9 > EMA21 (bullish cross)",
-        "MACD histogram positive (0.0262)",
-        "RSI overbought (71.79)",
-        "Price near upper BB (0.95) \u2014 extended",
-        "Volume normal (0.26x avg)"
+        "EMA9 < EMA21 (bearish cross)",
+        "MACD histogram negative (-0.0202)",
+        "RSI healthy (48.52)",
+        "Price mid-BB (0.33)",
+        "Volume normal (0.0x avg)"
       ]
     },
     "SUI-USD": {
-      "regime": "RANGING",
+      "regime": "TRENDING_DOWN",
       "confidence": 0.5,
-      "action": "HOLD",
-      "atr_pct": 1.076,
+      "action": "STAY_CASH",
+      "atr_pct": 1.704,
       "reasons": [
-        "EMA9 > EMA21 (bullish cross)",
-        "MACD histogram positive (0.0036)",
-        "RSI overbought (75.39)",
-        "Price near upper BB (0.98) \u2014 extended",
-        "Volume normal (0.35x avg)"
+        "EMA9 < EMA21 (bearish cross)",
+        "MACD histogram negative (-0.0019)",
+        "RSI neutral (38.92)",
+        "Price near lower BB (0.15) \u2014 compressed",
+        "Volume normal (0.0x avg)",
+        "ATR moderate (1.70% of price)"
       ]
     },
     "DOT-USD": {
-      "regime": "TRENDING_UP",
-      "confidence": 0.83,
-      "action": "BUY_ELIGIBLE",
-      "atr_pct": 0.936,
+      "regime": "TRENDING_DOWN",
+      "confidence": 0.5,
+      "action": "STAY_CASH",
+      "atr_pct": 1.361,
       "reasons": [
-        "EMA9 > EMA21 (bullish cross)",
-        "MACD histogram positive (0.0008)",
-        "RSI healthy (63.6)",
-        "Price mid-BB (0.75)",
-        "Volume normal (0.34x avg)"
+        "EMA9 < EMA21 (bearish cross)",
+        "MACD histogram negative (-0.0034)",
+        "RSI neutral (33.17)",
+        "Price near lower BB (0.03) \u2014 compressed",
+        "Volume normal (0.01x avg)"
       ]
     }
   },
-  "buy_candidates": [
+  "buy_candidates": [],
+  "avoid_list": [
+    "ETH-USD",
+    "XRP-USD",
+    "DOGE-USD",
     "ADA-USD",
     "AVAX-USD",
+    "LINK-USD",
+    "SUI-USD",
     "DOT-USD"
-  ],
-  "avoid_list": []
+  ]
 }
