@@ -1,14 +1,5 @@
 {
-  "total_trades": 40,
-  "open_positions": 9,
-  "wins": 30,
-  "losses": 10,
-  "win_rate_pct": 75.0,
-  "total_pnl_usd": 420.07,
-  "avg_win_usd": 16.8,
-  "avg_loss_usd": -8.39,
-  "profit_factor": 2.0,
-  "max_drawdown_usd": 53.16,
-  "sharpe_approx": 0.785,
-  "last_updated": "2026-08-25T15:00:28.644738"
+  "total_trades": 0,
+  "open_positions": 2,
+  "note": "No closed trades yet"
 }
