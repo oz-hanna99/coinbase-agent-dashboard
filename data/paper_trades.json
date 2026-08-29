@@ -15,7 +15,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "Existing ZEC holding registered at live launch. Stop -10%, TP +20%.",
-    "current_price": 781.52
+    "current_price": 835.38
   },
   {
     "id": "12fb5650-8f80-479b-b67c-b726bb987d65",
@@ -33,6 +33,6 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "Existing SUI holding registered at live launch. Stop -10%, TP +20%.",
-    "current_price": 0.7688
+    "current_price": 0.745
   }
 ]
