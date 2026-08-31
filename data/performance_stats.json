@@ -7,7 +7,7 @@
   "total_pnl_usd": 40.86,
   "avg_win_usd": 40.86,
   "avg_loss_usd": 0,
-  "profit_factor": Infinity,
+  "profit_factor": 999.0,
   "max_drawdown_usd": 0,
   "sharpe_approx": 0,
   "last_updated": "2026-08-31T19:43:10.131377"
