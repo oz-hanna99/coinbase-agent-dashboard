@@ -1,5 +1,14 @@
 {
-  "total_trades": 0,
-  "open_positions": 2,
-  "note": "No closed trades yet"
+  "total_trades": 1,
+  "open_positions": 8,
+  "wins": 1,
+  "losses": 0,
+  "win_rate_pct": 100.0,
+  "total_pnl_usd": 40.86,
+  "avg_win_usd": 40.86,
+  "avg_loss_usd": 0,
+  "profit_factor": Infinity,
+  "max_drawdown_usd": 0,
+  "sharpe_approx": 0,
+  "last_updated": "2026-08-31T19:38:52.427055"
 }
