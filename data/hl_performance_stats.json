@@ -1,0 +1,18 @@
+{
+  "total_trades": 22,
+  "open_positions": 11,
+  "wins": 8,
+  "losses": 14,
+  "win_rate_pct": 36.4,
+  "total_pnl_usd": -1.1,
+  "avg_win_usd": 2.24,
+  "avg_loss_usd": -1.36,
+  "profit_factor": 1.65,
+  "max_drawdown_usd": 13.59,
+  "sharpe_approx": -0.027,
+  "longs_closed": 13,
+  "long_win_rate": 0.0,
+  "shorts_closed": 9,
+  "short_win_rate": 88.9,
+  "last_updated": "2026-09-23T16:31:20.580369"
+}

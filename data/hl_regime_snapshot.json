@@ -1,0 +1,216 @@
+{
+  "timestamp": "2026-09-23T16:30:18.244130",
+  "regimes": {
+    "BTC": {
+      "regime": "TRENDING_DOWN",
+      "confidence": 0.5,
+      "action": "SHORT",
+      "atr_pct": 0.765,
+      "reasons": [
+        "EMA9 < EMA21 (bearish)",
+        "MACD negative (-286.7514)",
+        "RSI neutral (31.1)",
+        "Near lower BB (-0.03) \u2014 compressed",
+        "Volume spike (2.5x)"
+      ]
+    },
+    "ETH": {
+      "regime": "RANGING",
+      "confidence": 0.5,
+      "action": "HOLD",
+      "atr_pct": 0.916,
+      "reasons": [
+        "EMA9 < EMA21 (bearish)",
+        "MACD negative (-11.0894)",
+        "RSI oversold (25.03)",
+        "Near lower BB (-0.04) \u2014 compressed",
+        "Volume elevated (1.8x)"
+      ]
+    },
+    "SOL": {
+      "regime": "TRENDING_DOWN",
+      "confidence": 0.5,
+      "action": "SHORT",
+      "atr_pct": 1.254,
+      "reasons": [
+        "EMA9 < EMA21 (bearish)",
+        "MACD negative (-0.4974)",
+        "RSI neutral (34.43)",
+        "Near lower BB (0.02) \u2014 compressed",
+        "Volume elevated (1.6x)"
+      ]
+    },
+    "XRP": {
+      "regime": "TRENDING_DOWN",
+      "confidence": 0.5,
+      "action": "SHORT",
+      "atr_pct": 2.026,
+      "reasons": [
+        "EMA9 < EMA21 (bearish)",
+        "MACD negative (-0.0145)",
+        "RSI neutral (32.68)",
+        "Near lower BB (-0.05) \u2014 compressed",
+        "Volume elevated (2.4x)",
+        "ATR moderate (2.03%)"
+      ]
+    },
+    "DOGE": {
+      "regime": "RANGING",
+      "confidence": 0.5,
+      "action": "HOLD",
+      "atr_pct": 2.35,
+      "reasons": [
+        "EMA9 < EMA21 (bearish)",
+        "MACD negative (-0.0011)",
+        "RSI oversold (24.88)",
+        "Near lower BB (-0.09) \u2014 compressed",
+        "ATR moderate (2.35%)"
+      ]
+    },
+    "AVAX": {
+      "regime": "TRENDING_DOWN",
+      "confidence": 0.5,
+      "action": "SHORT",
+      "atr_pct": 2.326,
+      "reasons": [
+        "EMA9 < EMA21 (bearish)",
+        "MACD negative (-0.1049)",
+        "RSI neutral (30.51)",
+        "Near lower BB (-0.05) \u2014 compressed",
+        "Volume elevated (2.4x)",
+        "ATR moderate (2.33%)"
+      ]
+    },
+    "LINK": {
+      "regime": "RANGING",
+      "confidence": 0.5,
+      "action": "HOLD",
+      "atr_pct": 1.643,
+      "reasons": [
+        "EMA9 < EMA21 (bearish)",
+        "MACD negative (-0.0888)",
+        "RSI oversold (26.33)",
+        "Near lower BB (-0.04) \u2014 compressed",
+        "ATR moderate (1.64%)"
+      ]
+    },
+    "SUI": {
+      "regime": "RANGING",
+      "confidence": 0.5,
+      "action": "HOLD",
+      "atr_pct": 2.339,
+      "reasons": [
+        "EMA9 < EMA21 (bearish)",
+        "MACD negative (-0.0076)",
+        "RSI oversold (29.22)",
+        "Near lower BB (-0.12) \u2014 compressed",
+        "Volume elevated (2.0x)",
+        "ATR moderate (2.34%)"
+      ]
+    },
+    "DOT": {
+      "regime": "RANGING",
+      "confidence": 0.5,
+      "action": "HOLD",
+      "atr_pct": 2.029,
+      "reasons": [
+        "EMA9 < EMA21 (bearish)",
+        "MACD negative (-0.0100)",
+        "RSI oversold (26.54)",
+        "Near lower BB (-0.01) \u2014 compressed",
+        "ATR moderate (2.03%)"
+      ]
+    },
+    "ADA": {
+      "regime": "TRENDING_DOWN",
+      "confidence": 0.5,
+      "action": "SHORT",
+      "atr_pct": 2.1,
+      "reasons": [
+        "EMA9 < EMA21 (bearish)",
+        "MACD negative (-0.0024)",
+        "RSI neutral (32.25)",
+        "Near lower BB (-0.03) \u2014 compressed",
+        "ATR moderate (2.10%)"
+      ]
+    },
+    "BNB": {
+      "regime": "TRENDING_DOWN",
+      "confidence": 0.5,
+      "action": "SHORT",
+      "atr_pct": 0.928,
+      "reasons": [
+        "EMA9 < EMA21 (bearish)",
+        "MACD negative (-2.9127)",
+        "RSI neutral (31.13)",
+        "Near lower BB (-0.00) \u2014 compressed"
+      ]
+    },
+    "HYPE": {
+      "regime": "TRENDING_DOWN",
+      "confidence": 0.5,
+      "action": "SHORT",
+      "atr_pct": 1.396,
+      "reasons": [
+        "EMA9 < EMA21 (bearish)",
+        "MACD negative (-0.4338)",
+        "RSI neutral (38.66)",
+        "Near lower BB (0.04) \u2014 compressed"
+      ]
+    },
+    "ZEC": {
+      "regime": "RANGING",
+      "confidence": 0.5,
+      "action": "LONG_NEAR_LOWER_BB",
+      "atr_pct": 2.444,
+      "reasons": [
+        "EMA9 > EMA21 (bullish)",
+        "MACD negative (-9.8862)",
+        "RSI healthy (45.64)",
+        "Near lower BB (0.18) \u2014 compressed",
+        "Volume elevated (1.6x)",
+        "ATR moderate (2.44%)"
+      ]
+    },
+    "INJ": {
+      "regime": "HIGH_VOLATILITY",
+      "confidence": 0.75,
+      "action": "STAY_OUT",
+      "atr_pct": 3.211,
+      "reasons": [
+        "EMA9 < EMA21 (bearish)",
+        "MACD negative (-0.0468)",
+        "RSI neutral (40.61)",
+        "Near lower BB (0.01) \u2014 compressed",
+        "Volume elevated (1.7x)",
+        "ATR high (3.21%)"
+      ]
+    },
+    "TAO": {
+      "regime": "TRENDING_DOWN",
+      "confidence": 0.5,
+      "action": "SHORT",
+      "atr_pct": 2.855,
+      "reasons": [
+        "EMA9 < EMA21 (bearish)",
+        "MACD negative (-2.4744)",
+        "RSI neutral (34.29)",
+        "Near lower BB (-0.12) \u2014 compressed",
+        "ATR moderate (2.86%)"
+      ]
+    }
+  },
+  "long_candidates": [
+    "ZEC"
+  ],
+  "short_candidates": [
+    "BTC",
+    "SOL",
+    "XRP",
+    "AVAX",
+    "ADA",
+    "BNB",
+    "HYPE",
+    "TAO"
+  ]
+}
