@@ -173,7 +173,7 @@ function perf(stats,id,isHL){
   const el=document.getElementById(id);
   if(!stats||!stats.total_trades){el.innerHTML='<div style="color:var(--dim);font-family:Space Mono,monospace;font-size:11px;text-align:center;padding:20px 0">No closed trades yet</div>';return}
   const wr=stats.win_rate_pct;
-  const wc=wr>=60?'':'wr>=40?'warn':'down'';
+  const wc=wr>=60?'':wr>=40?'warn':'down';
   const pc=stats.profit_factor>=1.5?'var(--up)':stats.profit_factor>=1?'var(--warn)':'var(--down)';
   let h=`<div class="wb"><div class="wbl"><span>Win Rate</span><span>${wr}%</span></div><div class="wbt"><div class="wbf ${wr>=60?'':wr>=40?'warn':'down'}" style="width:${Math.min(wr,100)}%"></div></div></div>
   <div class="pr"><span class="pk">Closed trades</span><span class="pv">${stats.total_trades} (${stats.wins}W/${stats.losses}L)</span></div>
