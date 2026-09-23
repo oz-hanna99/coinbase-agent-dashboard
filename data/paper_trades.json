@@ -227,7 +227,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "Reconciled Sep 21 - actual Coinbase balance",
-    "current_price": 86557.3
+    "current_price": 86461.52
   },
   {
     "id": "c9b0e390-1130-45e1-ae15-31ea06ab7ba5",
@@ -245,7 +245,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "Reconciled Sep 21 - actual Coinbase balance",
-    "current_price": 2768.01
+    "current_price": 2759.61
   },
   {
     "id": "e2d5f008-bb87-4902-9095-ddfe8c533a44",
@@ -263,7 +263,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "Reconciled Sep 21 - actual Coinbase balance",
-    "current_price": 119.2
+    "current_price": 118.79
   },
   {
     "id": "541daadd-82f1-4c9e-9825-cc40c11e9969",
@@ -281,6 +281,6 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "Reconciled Sep 21 - actual Coinbase balance",
-    "current_price": 1.5535
+    "current_price": 1.5856
   }
 ]
