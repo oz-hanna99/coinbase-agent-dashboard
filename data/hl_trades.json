@@ -2703,7 +2703,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "All LONG criteria are satisfied: TRENDING_UP regime at 83% confidence, RSI at 47.65 (healthy, below 60), and MACD histogram positive at 3.0035. EMA9 > EMA21 confirms bullish momentum, BB% at 0.46 shows price in mid-range with room to run, and volume at 3.52x average signals strong participation. Stop is set below recent structure near the ATR-based support zone (~2638), with take-profit at ~2767 yielding exactly 2:1 risk/reward.",
-    "current_price": 2667.0
+    "current_price": 2659.1
   },
   {
     "id": "558dce07-aafd-44f0-bf97-01224958f190",

@@ -300,7 +300,8 @@
     "exit_price": 1.194,
     "pnl_usd": 0.0436,
     "reasoning": "Reconciled \u2014 DOT held without OPEN record",
-    "current_price": 1.1924
+    "current_price": 1.1924,
+    "mode": "RECONCILIATION"
   },
   {
     "timestamp": "2026-09-29T21:54:46.221039",
@@ -317,7 +318,8 @@
     "exit_price": 1.1505,
     "pnl_usd": -0.0149,
     "reasoning": "Reconciled \u2014 SUI held without OPEN record",
-    "current_price": 1.1497
+    "current_price": 1.1497,
+    "mode": "RECONCILIATION"
   },
   {
     "timestamp": "2026-09-29T21:54:46.221039",
@@ -334,7 +336,8 @@
     "exit_price": 0.094,
     "pnl_usd": -0.0502,
     "reasoning": "Reconciled \u2014 772.5 DOGE held without OPEN record",
-    "current_price": 0.09397
+    "current_price": 0.09397,
+    "mode": "RECONCILIATION"
   },
   {
     "timestamp": "2026-09-29T21:54:46.221039",
@@ -351,7 +354,8 @@
     "exit_price": 83646.85,
     "pnl_usd": -0.0418,
     "reasoning": "Reconciled \u2014 Sep26+Sep29 BTC buys not previously logged",
-    "current_price": 83583.12
+    "current_price": 83583.12,
+    "mode": "RECONCILIATION"
   },
   {
     "timestamp": "2026-09-29T23:43:33.766107",
@@ -474,7 +478,8 @@
     "close_reason": "STOP_LOSS",
     "close_time": "2026-10-01T20:01:04.200011",
     "pnl_pct": -15.7958,
-    "win": false
+    "win": false,
+    "mode": "RECONCILIATION"
   },
   {
     "timestamp": "2026-09-29T23:43:33.766107",
