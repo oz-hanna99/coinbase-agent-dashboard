@@ -13,6 +13,7 @@ cp "$HL_DIR/hl_trades.json"            "$DASH_DIR/data/hl_trades.json" 2>/dev/nu
 cp "$HL_DIR/hl_performance_stats.json" "$DASH_DIR/data/hl_performance_stats.json" 2>/dev/null || true
 
 cd "$DASH_DIR"
+git pull origin main --rebase --quiet 2>/dev/null || true
 git add data/ index.html push_dashboard.sh
 git commit -m "dashboard update: $(date '+%Y-%m-%d %H:%M')" --quiet
 git push origin main --quiet
