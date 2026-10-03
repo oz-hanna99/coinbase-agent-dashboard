@@ -39,7 +39,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "Strong confluence of bullish signals: TRENDING_UP regime with 83% confidence, bullish EMA9/EMA21 cross, positive MACD histogram, and RSI at a healthy 58.87 leaving room to run before overbought territory. Volume ratio of 2.23x average confirms institutional participation and conviction behind the move. Price sitting near BB midpoint at 72.94% with ATR-based stop just below the lower Bollinger Band offers a defined risk structure with favorable reward potential.",
-    "current_price": 119.67
+    "current_price": 119.82
   },
   {
     "id": "dc75d9cf-0b17-47ae-9171-33327424ca56",
@@ -219,7 +219,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "SUI is in a confirmed uptrend with bullish EMA cross (EMA9 > EMA21), positive MACD histogram, and regime classified as TRENDING_UP with 67% confidence. RSI at 68.13 is elevated but not overbought, and price sits at 75% of the Bollinger Band range suggesting room to push toward the upper band at $1.23. The primary concern is the very low volume ratio (0.14x average), which signals weak participation and reduces conviction \u2014 warranting a moderate rather than full aggressive position size until volume confirms the move.",
-    "current_price": 1.1775
+    "current_price": 1.1769
   },
   {
     "id": "f8cf1c75-9075-41a1-a35e-179c3fef6111",
@@ -330,6 +330,6 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "BTC is in a confirmed TRENDING_UP regime with 83% confidence, supported by bullish EMA cross, positive MACD histogram, and healthy RSI at 56.6 with room to run before overbought territory. Price is near the upper half of the Bollinger Band (0.779) which is consistent with a trending bull move rather than a reversal signal. The main caution is the very low volume ratio (0.12x average), which reduces conviction slightly, so a moderate 20% position is used rather than full aggressive sizing, with a stop below the BB lower band and a target near prior resistance.",
-    "current_price": 84866.6
+    "current_price": 84871.57
   }
 ]

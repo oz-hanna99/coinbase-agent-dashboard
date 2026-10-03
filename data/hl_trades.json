@@ -2703,7 +2703,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "All LONG criteria are satisfied: TRENDING_UP regime at 83% confidence, RSI at 47.65 (healthy, below 60), and MACD histogram positive at 3.0035. EMA9 > EMA21 confirms bullish momentum, BB% at 0.46 shows price in mid-range with room to run, and volume at 3.52x average signals strong participation. Stop is set below recent structure near the ATR-based support zone (~2638), with take-profit at ~2767 yielding exactly 2:1 risk/reward.",
-    "current_price": 2680.0
+    "current_price": 2683.2
   },
   {
     "id": "558dce07-aafd-44f0-bf97-01224958f190",
@@ -3288,7 +3288,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "All SHORT criteria are met: regime is TRENDING_DOWN (bearish), RSI at 49.37 is above 40, and MACD histogram is negative (-0.264). EMA9 (87.9958) is below EMA21 (88.5313) confirming bearish momentum, and below-average volume (0.71x) suggests weak buying pressure. Stop-loss is set above the EMA21 resistance level at ~90.79 (2.27 points risk), with take-profit at ~83.98 targeting approximately 4.54 points reward for a 2:1 risk/reward ratio.",
-    "current_price": 88.833
+    "current_price": 88.731
   },
   {
     "id": "2d203483-2d6f-419c-b9f2-77e402f6c680",
@@ -3327,7 +3327,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "All SHORT criteria are met: regime is TRENDING_DOWN (bearish), RSI at 45.72 is above 40, and MACD histogram is negative (-0.299). EMA9 < EMA21 confirms bearish momentum. Stop-loss is set just above recent resistance near 120.10 (1.14 risk), with take-profit at 116.68 (2.28 reward), achieving a 2:1 risk/reward ratio. Volume is low at 0.45x average and confidence is only 50%, so position size is kept conservative at 10%.",
-    "current_price": 119.48
+    "current_price": 119.7
   },
   {
     "id": "ed6a7e29-ed29-4d15-b562-7e3f40863bc4",
@@ -3366,7 +3366,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "All SHORT conditions are met: regime is TRENDING_DOWN (bearish), EMA9 < EMA21 confirming bearish cross, MACD histogram is negative (-0.00131), and RSI at 55.18 is above 40 threshold. BB% at 0.6149 suggests price is elevated within the band, supporting downside reversion. Stop is placed above recent resistance (~2x ATR above entry), with take-profit targeting ~2x ATR below entry for a clean 2:1 risk/reward.",
-    "current_price": 1.1791
+    "current_price": 1.1754
   },
   {
     "id": "685302fa-25a4-4bde-b17d-ac5f767e8646",
@@ -3384,7 +3384,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "All SHORT conditions are met: bearish regime with EMA9 < EMA21, negative MACD histogram (-0.000903), and RSI at 47.22 which is above 40 threshold. Volume is low at 0.2x average which tempers conviction slightly, but the technical alignment is clean with BB% at 0.36 suggesting price is mid-to-lower range with room to fall. Stop placed above recent EMA resistance at 0.25350 (~0.71% risk), with target at 0.23208 (~1.45% reward) achieving the required 2:1 ratio.",
-    "current_price": 0.24498
+    "current_price": 0.24607
   },
   {
     "id": "2529a10e-46d0-41b9-9ad0-8ea1c3f7a02a",
@@ -3402,7 +3402,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "All SHORT conditions are met: regime is TRENDING_DOWN (bearish), RSI at 46.07 is above 40, and MACD histogram is negative (-0.0025). EMA9 (1.488) is below EMA21 (1.4965) confirming bearish momentum, and BB% at 0.3566 places price in the lower half of the band. Stop-loss set at 1.5193 (~1.88% above entry, just above EMA21 resistance) and take-profit at 1.4353 (~3.76% below entry) achieves a clean 2:1 risk/reward ratio. Volume ratio is very low at 0.08x which tempers conviction slightly, so position size is kept moderate at 10%.",
-    "current_price": 1.4903
+    "current_price": 1.4926
   },
   {
     "id": "65984cb7-2733-4e58-86f3-53c53a5b5a85",
@@ -3441,7 +3441,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "All LONG criteria are satisfied: TRENDING_UP regime with 83% confidence, RSI at 55.35 (below 60), positive MACD histogram (0.0243), and bullish EMA cross (EMA9 > EMA21). BB% at 0.71 shows price has room before reaching overbought upper band, and volume ratio of 0.63x is modest but not concerning given the trend alignment. Stop placed below recent structure at 7.45 (ATR-based buffer ~1.5x ATR below entry), with take-profit at 7.9042 achieving a clean 2:1 risk/reward ratio.",
-    "current_price": 7.698
+    "current_price": 7.6862
   },
   {
     "id": "18c03ba9-02c1-487e-b7ad-c24a7bcdf4f2",
@@ -3459,7 +3459,7 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "All LONG criteria are satisfied: TRENDING_UP regime with 67% confidence, RSI at 57.35 (below 60 threshold), and MACD histogram positive at 0.0059. EMA9 > EMA21 confirms bullish momentum, and BB% at 0.9083 shows price is near the upper band consistent with trend strength. Stop-loss is set approximately 1 ATR (0.0338, 2x ATR for buffer) below entry at 1.1565, with take-profit at 1.2579 achieving the required 2:1 risk/reward ratio.",
-    "current_price": 1.2084
+    "current_price": 1.1998
   },
   {
     "id": "18c6fcab-4969-46c2-9655-18416a38b525",
@@ -3477,6 +3477,6 @@
     "exit_price": null,
     "pnl_usd": null,
     "reasoning": "All LONG criteria are met: TRENDING_UP regime with 83% confidence, RSI at 56.95 (below 60), and MACD histogram positive at 0.0345. EMA9 is above EMA21 confirming bullish momentum. Stop-loss is set just below the ATR-based support (~2x ATR below entry at 10.84), with take-profit at 11.59 achieving exactly 2:1 risk/reward. Volume ratio is low at 0.08x which is a minor concern, so position size is kept at 15% rather than maximum.",
-    "current_price": 11.09
+    "current_price": 11.167
   }
 ]
