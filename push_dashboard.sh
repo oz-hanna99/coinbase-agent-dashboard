@@ -2,6 +2,11 @@
 CB_DIR="/root/Coinbase-Agent-Jun2026"
 HL_DIR="/root/Hyperliquid-Agent"
 DASH_DIR="/root/coinbase-agent-dashboard"
+EMILY_DIR="/root/Emily-Coinbase-Agent"
+cp "$EMILY_DIR/paper_trades.json"        "$DASH_DIR/data/emily_trades.json"
+cp "$EMILY_DIR/performance_stats.json"   "$DASH_DIR/data/emily_performance_stats.json"
+cp "$EMILY_DIR/market_snapshot.json"     "$DASH_DIR/data/emily_market_snapshot.json" 2>/dev/null || true
+cp "$EMILY_DIR/regime_snapshot.json"     "$DASH_DIR/data/emily_regime_snapshot.json" 2>/dev/null || true
 
 cp "$CB_DIR/market_snapshot.json"   "$DASH_DIR/data/market_snapshot.json"
 cp "$CB_DIR/regime_snapshot.json"   "$DASH_DIR/data/regime_snapshot.json"

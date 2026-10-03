@@ -1,206 +1,197 @@
 {
-  "timestamp": "2026-10-02T21:30:22.626444",
+  "timestamp": "2026-10-03T15:30:20.791749",
   "regimes": {
     "BTC": {
-      "regime": "TRENDING_DOWN",
-      "confidence": 0.5,
-      "action": "SHORT",
-      "atr_pct": 0.652,
+      "regime": "RANGING",
+      "confidence": 0.4,
+      "action": "HOLD",
+      "atr_pct": 0.284,
       "reasons": [
         "EMA9 < EMA21 (bearish)",
-        "MACD negative (-273.0253)",
-        "RSI neutral (39.4)",
-        "Near lower BB (0.13) \u2014 compressed"
+        "MACD positive (45.7725)",
+        "RSI healthy (50.21)",
+        "Near upper BB (0.87) \u2014 extended"
       ]
     },
     "ETH": {
-      "regime": "TRENDING_DOWN",
-      "confidence": 0.5,
-      "action": "SHORT",
-      "atr_pct": 0.758,
+      "regime": "RANGING",
+      "confidence": 0.4,
+      "action": "HOLD",
+      "atr_pct": 0.364,
       "reasons": [
         "EMA9 < EMA21 (bearish)",
-        "MACD negative (-9.7800)",
-        "RSI neutral (32.28)",
-        "Near lower BB (0.07) \u2014 compressed"
+        "MACD positive (1.6318)",
+        "RSI neutral (44.45)",
+        "Mid BB (0.61)"
       ]
     },
     "SOL": {
-      "regime": "TRENDING_DOWN",
-      "confidence": 0.5,
-      "action": "SHORT",
-      "atr_pct": 0.999,
+      "regime": "TRENDING_UP",
+      "confidence": 0.83,
+      "action": "LONG",
+      "atr_pct": 0.533,
       "reasons": [
-        "EMA9 < EMA21 (bearish)",
-        "MACD negative (-0.5544)",
-        "RSI neutral (34.93)",
-        "Near lower BB (0.05) \u2014 compressed"
+        "EMA9 > EMA21 (bullish)",
+        "MACD positive (0.0721)",
+        "RSI healthy (50.96)",
+        "Mid BB (0.70)"
       ]
     },
     "XRP": {
-      "regime": "TRENDING_DOWN",
-      "confidence": 0.5,
-      "action": "SHORT",
-      "atr_pct": 1.1,
+      "regime": "RANGING",
+      "confidence": 0.4,
+      "action": "HOLD",
+      "atr_pct": 0.551,
       "reasons": [
         "EMA9 < EMA21 (bearish)",
-        "MACD negative (-0.0077)",
-        "RSI neutral (34.72)",
-        "Near lower BB (0.10) \u2014 compressed"
+        "MACD positive (0.0015)",
+        "RSI healthy (50.06)",
+        "Near upper BB (0.84) \u2014 extended"
       ]
     },
     "DOGE": {
       "regime": "RANGING",
       "confidence": 0.5,
       "action": "HOLD",
-      "atr_pct": 1.268,
+      "atr_pct": 0.668,
       "reasons": [
         "EMA9 < EMA21 (bearish)",
-        "MACD negative (-0.0006)",
-        "RSI oversold (29.44)",
-        "Near lower BB (0.05) \u2014 compressed",
-        "Volume elevated (1.6x)"
+        "MACD positive (0.0001)",
+        "RSI healthy (48.54)",
+        "Mid BB (0.73)"
       ]
     },
     "AVAX": {
-      "regime": "TRENDING_DOWN",
-      "confidence": 0.5,
-      "action": "SHORT",
-      "atr_pct": 1.519,
+      "regime": "TRENDING_UP",
+      "confidence": 0.83,
+      "action": "LONG",
+      "atr_pct": 1.108,
       "reasons": [
-        "EMA9 < EMA21 (bearish)",
-        "MACD negative (-0.0713)",
-        "RSI neutral (30.51)",
-        "Near lower BB (0.01) \u2014 compressed",
-        "ATR moderate (1.52%)"
+        "EMA9 > EMA21 (bullish)",
+        "MACD positive (0.0345)",
+        "RSI healthy (56.95)",
+        "Mid BB (0.78)"
       ]
     },
     "LINK": {
       "regime": "RANGING",
-      "confidence": 0.5,
+      "confidence": 0.4,
       "action": "HOLD",
-      "atr_pct": 1.481,
+      "atr_pct": 0.837,
       "reasons": [
         "EMA9 < EMA21 (bearish)",
-        "MACD negative (-0.0940)",
-        "RSI oversold (23.9)",
-        "Near lower BB (0.02) \u2014 compressed"
+        "MACD positive (0.0090)",
+        "RSI neutral (40.16)",
+        "Mid BB (0.40)"
       ]
     },
     "SUI": {
-      "regime": "TRENDING_DOWN",
-      "confidence": 0.5,
-      "action": "SHORT",
-      "atr_pct": 1.892,
+      "regime": "TRENDING_UP",
+      "confidence": 0.83,
+      "action": "LONG",
+      "atr_pct": 1.444,
       "reasons": [
-        "EMA9 < EMA21 (bearish)",
-        "MACD negative (-0.0082)",
-        "RSI neutral (32.53)",
-        "Near lower BB (0.03) \u2014 compressed",
-        "ATR moderate (1.89%)"
+        "EMA9 > EMA21 (bullish)",
+        "MACD positive (0.0032)",
+        "RSI healthy (54.94)",
+        "Mid BB (0.69)"
       ]
     },
     "DOT": {
-      "regime": "RANGING",
-      "confidence": 0.5,
-      "action": "HOLD",
-      "atr_pct": 1.722,
+      "regime": "TRENDING_UP",
+      "confidence": 0.67,
+      "action": "LONG",
+      "atr_pct": 1.447,
       "reasons": [
-        "EMA9 < EMA21 (bearish)",
-        "MACD negative (-0.0093)",
-        "RSI oversold (28.65)",
-        "Near lower BB (-0.00) \u2014 compressed",
-        "ATR moderate (1.72%)"
+        "EMA9 > EMA21 (bullish)",
+        "MACD positive (0.0083)",
+        "RSI healthy (60.92)",
+        "Near upper BB (0.95) \u2014 extended"
       ]
     },
     "ADA": {
-      "regime": "TRENDING_DOWN",
-      "confidence": 0.5,
-      "action": "SHORT",
-      "atr_pct": 1.6,
-      "reasons": [
-        "EMA9 < EMA21 (bearish)",
-        "MACD negative (-0.0021)",
-        "RSI neutral (30.76)",
-        "Near lower BB (0.04) \u2014 compressed",
-        "Volume elevated (1.5x)",
-        "ATR moderate (1.60%)"
-      ]
-    },
-    "BNB": {
-      "regime": "TRENDING_DOWN",
-      "confidence": 0.5,
-      "action": "SHORT",
-      "atr_pct": 0.556,
-      "reasons": [
-        "EMA9 < EMA21 (bearish)",
-        "MACD negative (-1.8126)",
-        "RSI neutral (37.57)",
-        "Near lower BB (0.05) \u2014 compressed"
-      ]
-    },
-    "HYPE": {
       "regime": "RANGING",
       "confidence": 0.5,
       "action": "HOLD",
-      "atr_pct": 1.275,
+      "atr_pct": 0.955,
       "reasons": [
         "EMA9 < EMA21 (bearish)",
-        "MACD negative (-0.5107)",
-        "RSI oversold (29.65)",
-        "Near lower BB (-0.03) \u2014 compressed"
+        "MACD positive (0.0002)",
+        "RSI healthy (46.62)",
+        "Mid BB (0.55)"
+      ]
+    },
+    "BNB": {
+      "regime": "TRENDING_UP",
+      "confidence": 0.67,
+      "action": "LONG",
+      "atr_pct": 0.361,
+      "reasons": [
+        "EMA9 > EMA21 (bullish)",
+        "MACD positive (1.4002)",
+        "RSI healthy (64.07)",
+        "Near upper BB (1.04) \u2014 extended"
+      ]
+    },
+    "HYPE": {
+      "regime": "TRENDING_UP",
+      "confidence": 0.83,
+      "action": "LONG",
+      "atr_pct": 0.863,
+      "reasons": [
+        "EMA9 > EMA21 (bullish)",
+        "MACD positive (0.1093)",
+        "RSI healthy (54.64)",
+        "Mid BB (0.73)"
       ]
     },
     "ZEC": {
       "regime": "RANGING",
-      "confidence": 0.5,
+      "confidence": 0.4,
       "action": "HOLD",
-      "atr_pct": 2.16,
+      "atr_pct": 1.251,
       "reasons": [
         "EMA9 < EMA21 (bearish)",
-        "MACD negative (-10.7559)",
-        "RSI oversold (26.04)",
-        "Near lower BB (0.00) \u2014 compressed",
-        "ATR moderate (2.16%)"
+        "MACD positive (0.6438)",
+        "RSI neutral (35.64)",
+        "Mid BB (0.25)"
       ]
     },
     "INJ": {
-      "regime": "TRENDING_DOWN",
-      "confidence": 0.5,
-      "action": "SHORT",
-      "atr_pct": 1.815,
+      "regime": "TRENDING_UP",
+      "confidence": 0.83,
+      "action": "LONG",
+      "atr_pct": 1.5,
       "reasons": [
-        "EMA9 < EMA21 (bearish)",
-        "MACD negative (-0.0295)",
-        "RSI neutral (39.86)",
-        "Near lower BB (0.01) \u2014 compressed",
-        "ATR moderate (1.81%)"
+        "EMA9 > EMA21 (bullish)",
+        "MACD positive (0.0058)",
+        "RSI healthy (58.61)",
+        "Mid BB (0.73)",
+        "Volume elevated (1.8x)",
+        "ATR moderate (1.50%)"
       ]
     },
     "TAO": {
       "regime": "RANGING",
-      "confidence": 0.5,
+      "confidence": 0.4,
       "action": "HOLD",
-      "atr_pct": 1.941,
+      "atr_pct": 1.23,
       "reasons": [
         "EMA9 < EMA21 (bearish)",
-        "MACD negative (-3.1805)",
-        "RSI oversold (24.01)",
-        "Near lower BB (-0.01) \u2014 compressed",
-        "ATR moderate (1.94%)"
+        "MACD positive (0.7639)",
+        "RSI neutral (44.98)",
+        "Mid BB (0.63)"
       ]
     }
   },
-  "long_candidates": [],
-  "short_candidates": [
-    "BTC",
-    "ETH",
+  "long_candidates": [
     "SOL",
-    "XRP",
     "AVAX",
     "SUI",
-    "ADA",
+    "DOT",
     "BNB",
+    "HYPE",
     "INJ"
-  ]
+  ],
+  "short_candidates": []
 }

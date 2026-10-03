@@ -9,7 +9,7 @@
 :root {
   --bg:#080b10;--surface:#0d1117;--border:#1c2230;--muted:#2a3347;
   --text:#c8d3e6;--dim:#5a6a85;--up:#00e5a0;--down:#ff4560;--warn:#ffb800;
-  --cb:#3b82f6;--hl:#a855f7;
+  --cb:#3b82f6;--hl:#a855f7;--em:#06b6d4;
   --st:env(safe-area-inset-top,0px);--sb:env(safe-area-inset-bottom,0px);
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -25,9 +25,11 @@ header{border-bottom:1px solid var(--border);padding:16px 28px;display:flex;alig
 .tabs{display:flex;border-bottom:1px solid var(--border);padding:0 28px;background:var(--bg);position:sticky;top:calc(var(--st) + 53px);z-index:19}
 .tab{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 20px 12px;cursor:pointer;color:var(--dim);border-bottom:2px solid transparent;margin-bottom:-1px;display:flex;align-items:center;gap:8px;transition:color .15s,border-color .15s}
 .tab.cb{color:var(--cb);border-bottom-color:var(--cb)}
+.tab.em{color:var(--em);border-bottom-color:var(--em)}
 .tab.hl{color:var(--hl);border-bottom-color:var(--hl)}
 .badge{font-size:9px;padding:2px 6px;border-radius:10px;font-weight:700}
 .bcb{background:#3b82f615;color:var(--cb);border:1px solid #3b82f630}
+.bem{background:#06b6d415;color:var(--em);border:1px solid #06b6d430}
 .bhl{background:#a855f715;color:var(--hl);border:1px solid #a855f730}
 .panel{display:none}
 .panel.on{display:block}
@@ -85,6 +87,7 @@ footer{text-align:center;padding:20px;color:var(--dim);font-family:'Space Mono',
 </header>
 <div class="tabs">
   <div class="tab cb" id="tcb" onclick="sw('cb')">Coinbase <span class="badge bcb">LIVE</span></div>
+  <div class="tab" id="tem" onclick="sw('em')">Emily <span class="badge bem">PAPER</span></div>
   <div class="tab" id="thl" onclick="sw('hl')">Hyperliquid <span class="badge bhl">PAPER</span></div>
 </div>
 
@@ -110,6 +113,28 @@ footer{text-align:center;padding:20px;color:var(--dim);font-family:'Space Mono',
   </div>
 </main></div>
 
+<!-- EMILY (paper Coinbase) -->
+<div class="panel" id="pem"><main>
+  <div class="strip">
+    <div class="sc"><div class="sl">Total P&L</div><div class="sv" id="em-pnl">—</div><div class="ss" id="em-tc">0 closed</div></div>
+    <div class="sc"><div class="sl">Win Rate</div><div class="sv" id="em-wr">—</div><div class="ss">target &gt;60%</div></div>
+    <div class="sc"><div class="sl">Open</div><div class="sv" id="em-op">—</div><div class="ss">long-only spot</div></div>
+    <div class="sc"><div class="sl">Max Drawdown</div><div class="sv" id="em-dd">—</div><div class="ss">20% circuit breaker</div></div>
+  </div>
+  <div><div class="sec-label">Market Scan<span id="em-mt"></span></div><div class="grid" id="em-grid"><div style="grid-column:span 5;text-align:center;color:var(--dim);padding:30px;font-family:Space Mono,monospace;font-size:11px">Waiting for first cycle...</div></div></div>
+  <div class="two">
+    <div>
+      <div class="sec-label">Open Positions</div>
+      <div class="tw"><table><thead><tr><th>Opened</th><th>Ticker</th><th>Entry</th><th>Stop</th><th>Target</th><th>Unreal P&L</th></tr></thead><tbody id="em-pos"><tr class="emp"><td colspan="6">No open positions</td></tr></tbody></table></div>
+    </div>
+    <div><div class="sec-label">Performance</div><div class="pp" id="em-perf"><div style="color:var(--dim);font-family:Space Mono,monospace;font-size:11px;text-align:center;padding:20px 0">No closed trades yet</div></div></div>
+  </div>
+  <div>
+    <div class="sec-label">Trade History</div>
+    <div class="tw"><table><thead><tr><th>Closed</th><th>Ticker</th><th>Entry</th><th>Exit</th><th>Size</th><th>P&L</th><th>Result</th></tr></thead><tbody id="em-hist"><tr class="emp"><td colspan="7">No closed trades yet</td></tr></tbody></table></div>
+  </div>
+</main></div>
+
 <!-- HYPERLIQUID -->
 <div class="panel" id="phl"><main>
   <div class="strip">
@@ -132,7 +157,7 @@ footer{text-align:center;padding:20px;color:var(--dim);font-family:'Space Mono',
   </div>
 </main></div>
 
-<footer>Oz Trading Agents · Coinbase (live) + Hyperliquid (paper) · Push data manually to update</footer>
+<footer>Oz Trading Agents · Coinbase (live) · Emily (paper CB) · Hyperliquid (paper perps) · Push data manually to update</footer>
 
 <script>
 const f=(n,d=2)=>n==null?'—':Number(n).toFixed(d);
@@ -187,11 +212,12 @@ function perf(stats,id,isHL){
 }
 
 async function refresh(){
-  const [cbM,cbR,cbT,cbS,hlM,hlR,hlT,hlS]=await Promise.all([
+  const [cbM,cbR,cbT,cbS,emM,emR,emT,emS,hlM,hlR,hlT,hlS]=await Promise.all([
     lj('data/market_snapshot.json'),lj('data/regime_snapshot.json'),lj('data/paper_trades.json'),lj('data/performance_stats.json'),
+    lj('data/emily_market_snapshot.json'),lj('data/emily_regime_snapshot.json'),lj('data/emily_trades.json'),lj('data/emily_performance_stats.json'),
     lj('data/hl_market_snapshot.json'),lj('data/hl_regime_snapshot.json'),lj('data/hl_trades.json'),lj('data/hl_performance_stats.json')
   ]);
-  const ts=cbM?.timestamp||hlM?.timestamp;
+  const ts=cbM?.timestamp||emM?.timestamp||hlM?.timestamp;
   if(ts)document.getElementById('ts').textContent='Updated '+fd(ts);
 
   // COINBASE
@@ -210,6 +236,23 @@ async function refresh(){
   document.getElementById('cb-pos').innerHTML=co.length?co.map(t=>{const u=t.current_price&&t.entry_price&&t.coins?(t.current_price-t.entry_price)*t.coins:null;return`<tr><td>${fd(t.timestamp)}</td><td>${t.ticker}</td><td>${fu(t.entry_price)}</td><td>${fu(t.stop_loss)}</td><td>${fu(t.take_profit)}</td><td class="${u>0?'u':u<0?'d':''}">${u!=null?(u>=0?'+':'')+'$'+Math.abs(u).toFixed(2):'—'}</td></tr>`}).join(''):'<tr class="emp"><td colspan="6">No open positions</td></tr>';
   const cc=(cbT||[]).filter(t=>t.status==='CLOSED').reverse();
   document.getElementById('cb-hist').innerHTML=cc.length?cc.map(t=>`<tr><td>${fd(t.close_time)}</td><td>${t.ticker}</td><td>${fu(t.entry_price)}</td><td>${fu(t.exit_price)}</td><td>${fu(t.trade_usd)}</td><td class="${t.pnl_usd>0?'u':'d'}">${t.pnl_usd!=null?(t.pnl_usd>=0?'+':'')+'$'+Math.abs(t.pnl_usd).toFixed(2):'—'}</td><td class="${t.win?'u':'d'}">${t.close_reason||''}</td></tr>`).join(''):'<tr class="emp"><td colspan="7">No closed trades yet</td></tr>';
+
+  // EMILY
+  grid(emM?.data||{},emR?.regimes||{},CBT,'em-grid');
+  if(emR?.timestamp)document.getElementById('em-mt').textContent=fd(emR.timestamp);
+  if(emS){
+    const p=emS.total_pnl_usd;const w=emS.win_rate_pct;
+    const pe=document.getElementById('em-pnl');pe.textContent=p!=null?(p>=0?'+$':'-$')+Math.abs(p).toFixed(2):'—';pe.className='sv '+(p>0?'up':p<0?'down':'');
+    const we=document.getElementById('em-wr');we.textContent=w!=null?w+'%':'—';we.className='sv '+(w>=60?'up':w>=40?'warn':w!=null?'down':'');
+    document.getElementById('em-tc').textContent=(emS.total_trades||0)+' closed trades';
+    document.getElementById('em-dd').textContent=emS.max_drawdown_usd!=null?'$'+emS.max_drawdown_usd.toFixed(2):'—';
+    perf(emS,'em-perf',false);
+  }
+  const eo=(emT||[]).filter(t=>t.status==='OPEN');
+  document.getElementById('em-op').textContent=eo.length;
+  document.getElementById('em-pos').innerHTML=eo.length?eo.map(t=>{const u=t.current_price&&t.entry_price&&t.coins?(t.current_price-t.entry_price)*t.coins:null;return`<tr><td>${fd(t.timestamp)}</td><td>${t.ticker}</td><td>${fu(t.entry_price)}</td><td>${fu(t.stop_loss)}</td><td>${fu(t.take_profit)}</td><td class="${u>0?'u':u<0?'d':''}">${u!=null?(u>=0?'+':'')+'$'+Math.abs(u).toFixed(2):'—'}</td></tr>`}).join(''):'<tr class="emp"><td colspan="6">No open positions</td></tr>';
+  const ec=(emT||[]).filter(t=>t.status==='CLOSED'&&t.mode!=='RECONCILIATION').reverse();
+  document.getElementById('em-hist').innerHTML=ec.length?ec.map(t=>`<tr><td>${fd(t.close_time)}</td><td>${t.ticker}</td><td>${fu(t.entry_price)}</td><td>${fu(t.exit_price)}</td><td>${fu(t.trade_usd)}</td><td class="${t.pnl_usd>0?'u':'d'}">${t.pnl_usd!=null?(t.pnl_usd>=0?'+':'')+'$'+Math.abs(t.pnl_usd).toFixed(2):'—'}</td><td class="${t.pnl_usd>0?'u':'d'}">${t.close_reason||''}</td></tr>`).join(''):'<tr class="emp"><td colspan="7">No closed trades yet</td></tr>';
 
   // HYPERLIQUID
   grid(hlM?.data||{},hlR?.regimes||{},HLT,'hl-grid');
@@ -231,8 +274,10 @@ async function refresh(){
 
 function sw(w){
   document.getElementById('pcb').classList.toggle('on',w==='cb');
+  document.getElementById('pem').classList.toggle('on',w==='em');
   document.getElementById('phl').classList.toggle('on',w==='hl');
   document.getElementById('tcb').className='tab'+(w==='cb'?' cb':'');
+  document.getElementById('tem').className='tab'+(w==='em'?' em':'');
   document.getElementById('thl').className='tab'+(w==='hl'?' hl':'');
 }
 refresh();
